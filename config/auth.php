@@ -39,7 +39,14 @@ return [
         'web' => [
             'driver' => 'session',
             'provider' => 'users',
-        ],
+        ],'tamu' => [
+            'driver' => 'session',
+            'provider' => 'tamu',
+         ],
+         'admin' => [
+            'driver' => 'session',
+            'provider' => 'admin',
+         ],
 
         'api' => [
             'driver' => 'token',
@@ -69,6 +76,14 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
+        ],
+        'tamu' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\loginTamu::class,
+        ],
+        'admin' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\loginAdmin::class,
         ],
 
         // 'users' => [
